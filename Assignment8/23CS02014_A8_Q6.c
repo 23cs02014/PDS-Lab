@@ -17,19 +17,19 @@ int main()
     int i = 0, j = 0;
     while (i < n1)
     {
-        str3[i] = str1[i];
+        *(str3 + i) = *(str1+i);
         i++;
     }
     while (j < n2)
     {
-        str3[i] = str2[j];
+        *(str3+i) = *(str2+j);
         i++;
         j++;
     }
     printf("Concatenated string: ");
     for (int k = 0; k < n1 + n2; k++)
     {
-        printf("%c", str3[k]);
+        printf("%c", *(str3+k));
     }
     // printf("Concatenated string: %s",str3);
 }
